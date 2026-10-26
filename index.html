@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Your Agency – Digital marketing that brings in customers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#eef2f6;--ink:#10243a;--muted:#4d6076;--blue:#2f5bff;--sun:#ffd23f;--card:#fff;--line:#d3dce6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 "Source Sans 3",system-ui,sans-serif}
+h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+a{color:inherit}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+nav strong{font:800 22px "Bricolage Grotesque",sans-serif}
+nav a{text-decoration:none;margin-left:22px;font-weight:600}
+.btn{display:inline-block;background:var(--blue);color:#fff;border:0;border-radius:8px;padding:13px 24px;font:600 17px "Source Sans 3",sans-serif;cursor:pointer;text-decoration:none}
+.btn:hover{background:#1f45d6}
+:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
+.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding:56px 0 72px}
+.hero h1{font-size:clamp(38px,5.5vw,64px);font-weight:800;letter-spacing:-.02em}
+.hero p{color:var(--muted);max-width:46ch;margin:20px 0 28px}
+.calc{background:var(--ink);color:#fff;border-radius:16px;padding:28px}
+.calc h2{font-size:22px;margin-bottom:18px}
+.calc label{display:flex;justify-content:space-between;font-weight:600;margin-top:16px}
+.calc input[type=range]{width:100%;accent-color:var(--sun)}
+.result{margin-top:24px;padding-top:20px;border-top:1px solid #35506f}
+.result b{display:block;font:800 52px "Bricolage Grotesque",sans-serif;color:var(--sun);line-height:1}
+.result small{color:#b8c7d8;display:block;margin-top:10px;font-size:14px}
+section{padding:64px 0}
+section h2{font-size:clamp(28px,4vw,40px);margin-bottom:32px}
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+.svc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
+.svc h3{font-size:21px;margin-bottom:8px}
+.svc p{margin:0;color:var(--muted);font-size:16px}
+.steps{list-style:none;padding:0;margin:0;display:grid;gap:0;max-width:640px}
+.steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
+.steps li:last-child{border-bottom:1px solid var(--line)}
+.steps span{font:800 24px "Bricolage Grotesque",sans-serif;color:var(--blue)}
+.steps b{display:block;font-size:19px}
+.steps p{margin:2px 0 0;color:var(--muted)}
+.contact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px;max-width:620px}
+.contact label{display:block;font-weight:600;margin-top:16px}
+.contact input,.contact select,.contact textarea{width:100%;margin-top:6px;padding:12px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff;color:var(--ink)}
+.contact .btn{margin-top:24px}
+#msg{margin-top:16px;font-weight:600}
+footer{padding:32px 0 48px;color:var(--muted);font-size:15px}
+.work{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
+.work p{color:var(--muted);max-width:44ch}
+.reel{width:min(340px,100%);aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--ink);justify-self:center}
+.reel video,.reel iframe{width:100%;height:100%;object-fit:cover;border:0;display:block}
+@media(max-width:760px){.work{grid-template-columns:1fr}}
+@media(max-width:760px){.hero{grid-template-columns:1fr}nav a:not(.btn){display:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <strong>Your Agency</strong>
+    <div><a href="#services">Services</a><a href="#process">How we work</a><a class="btn" href="#contact">Get a free plan</a></div>
+  </nav>
+
+  <header class="hero">
+    <div>
+      <h1>Marketing that pays for itself.</h1>
+      <p>We run search, social and email campaigns for small businesses, and report on one thing: how many customers you got and what each cost.</p>
+      <a class="btn" href="#contact">Book a free strategy call</a>
+    </div>
+    <div class="calc" aria-live="polite">
+      <h2>Estimate your results</h2>
+      <label for="budget">Monthly ad budget <span id="bv"></span></label>
+      <input type="range" id="budget" min="500" max="20000" step="500" value="3000">
+      <label for="cpc">Cost per click <span id="cv"></span></label>
+      <input type="range" id="cpc" min="0.2" max="5" step="0.1" value="1">
+      <label for="cr">Visitors who enquire <span id="rv"></span></label>
+      <input type="range" id="cr" min="1" max="15" step="0.5" value="4">
+      <div class="result"><b id="leads">0</b>enquiries per month
+        <small id="cpl"></small>
+        <small>A rough estimate. Real results depend on your market and offer.</small></div>
+    </div>
+  </header>
+
+  <section id="work">
+    <div class="work">
+      <div>
+        <h2>See our work</h2>
+        <p>A recent project from our team. Scroll and it plays on its own.</p>
+      </div>
+      <div class="reel" id="reel">
+        <!-- <video id="projectVideo" src="video/project.mp4" muted loop playsinline preload="metadata"></video> -->
+         
+<video
+  id="projectVideo"
+  src="./video/project.mp4"
+  muted
+  loop
+  playsinline
+  preload="metadata">
+</video>
+
+      </div>
+    </div>
+  </section>
+
+  <section id="services">
+    <h2>What we do</h2>
+    <div class="services">
+      <div class="svc"><h3>Search ads</h3><p>Show up when people are already searching for what you sell.</p></div>
+      <div class="svc"><h3>Social media</h3><p>Paid and organic content that builds an audience and drives enquiries.</p></div>
+      <div class="svc"><h3>SEO</h3><p>Fix your site and content so you rank without paying for every click.</p></div>
+      <div class="svc"><h3>Email marketing</h3><p>Turn past customers and leads into repeat sales.</p></div>
+    </div>
+  </section>
+
+  <section id="process">
+    <h2>How we work</h2>
+    <ol class="steps">
+      <li><span>1</span><div><b>Audit</b><p>We review your site, ads and competitors, and send you what we find.</p></div></li>
+      <li><span>2</span><div><b>Plan</b><p>You get a campaign plan with a budget and a target cost per customer.</p></div></li>
+      <li><span>3</span><div><b>Launch</b><p>We build and run the campaigns, testing new ads every week.</p></div></li>
+      <li><span>4</span><div><b>Report</b><p>A monthly report in plain language, then a call to decide what to change.</p></div></li>
+    </ol>
+  </section>
+
+  <section id="contact">
+    <h2>Get your free plan</h2>
+    <form class="contact" id="form">
+      <label for="name">Your name</label>
+      <input id="name" required>
+      <label for="email">Email</label>
+      <input id="email" type="email" required>
+      <label for="need">What do you need most?</label>
+      <select id="need"><option>Search ads</option><option>Social media</option><option>SEO</option><option>Email marketing</option><option>Not sure yet</option></select>
+      <label for="note">Tell us about your business</label>
+      <textarea id="note" rows="4"></textarea>
+      <button class="btn" type="submit">Send request</button>
+      <div id="msg" role="status"></div>
+    </form>
+  </section>
+
+  <footer>© <span id="yr"></span> Your Agency. hello@youragency.com</footer>
+</div>
+
+<script>
+const $ = id => document.getElementById(id);
+const AGENCY_EMAIL = "hello@youragency.com"; // change to your email
+function calc(){
+  const b=+$("budget").value, c=+$("cpc").value, r=+$("cr").value;
+  const leads=Math.round(b/c*r/100);
+  $("bv").textContent="₹"+b.toLocaleString("en-IN");
+  $("cv").textContent="₹"+c.toFixed(1);
+  $("rv").textContent=r+"%";
+  $("leads").textContent=leads.toLocaleString("en-IN");
+  $("cpl").textContent=leads?"About ₹"+Math.round(b/leads).toLocaleString("en-IN")+" per enquiry":"";
+}
+["budget","cpc","cr"].forEach(i=>$(i).addEventListener("input",calc));
+calc();
+$("yr").textContent=new Date().getFullYear();
+
+// Play the project video when it scrolls into view, pause when it leaves.
+const vid=$("projectVideo");
+function showInstagramFallback(){
+  $("reel").innerHTML='<iframe src="https://www.instagram.com/reel/De6OWplMRM3/embed" title="Project video" loading="lazy" allowfullscreen></iframe>';
+}
+vid.addEventListener("error",showInstagramFallback);
+new IntersectionObserver(entries=>{
+  entries.forEach(en=>{
+    if(en.isIntersecting){vid.play().catch(()=>{});}else{vid.pause();}
+  });
+},{threshold:0.5}).observe(vid);
+$("form").addEventListener("submit",e=>{
+  e.preventDefault();
+  const body=`Name: ${$("name").value}\nEmail: ${$("email").value}\nNeed: ${$("need").value}\n\n${$("note").value}`;
+  window.location.href=`mailto:${AGENCY_EMAIL}?subject=${encodeURIComponent("New enquiry from "+$("name").value)}&body=${encodeURIComponent(body)}`;
+  $("msg").textContent="Opening your email app. Just press send to finish.";
+});
+</script>
+</body>
+</html>

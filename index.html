@@ -3,179 +3,338 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Your Agency – Digital marketing that brings in customers</title>
+<title>Pondy Editor – Video editing, digital marketing and Meta ads in Puducherry</title>
+<meta name="description" content="Video shooting, editing, digital marketing and Meta ads in Puducherry. From capture to delivery.">
+<link rel="icon" href="images/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Source+Sans+3:wght@400;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<script>document.documentElement.classList.add("js")</script>
 <style>
-:root{--bg:#eef2f6;--ink:#10243a;--muted:#4d6076;--blue:#2f5bff;--sun:#ffd23f;--card:#fff;--line:#d3dce6}
+:root{--bg:#17181c;--bg2:#202127;--ink:#f4efe4;--mute:#a8aab5;--y:#ffc21a;--dk:#1b1c20;--line:#34363e;--pad:clamp(20px,5vw,88px)}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--ink);font:18px/1.6 "Source Sans 3",system-ui,sans-serif}
-h1,h2,h3{font-family:"Bricolage Grotesque",system-ui,sans-serif;line-height:1.1;margin:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{margin:0;width:100%;overflow-x:hidden;background:var(--bg);color:var(--ink);font:clamp(16px,1.1vw,18px)/1.65 "DM Sans",system-ui,sans-serif}
+h1,h2,h3{font-family:Syne,system-ui,sans-serif;margin:0;line-height:1.05;letter-spacing:-.02em}
 a{color:inherit}
-.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-nav strong{font:800 22px "Bricolage Grotesque",sans-serif}
-nav a{text-decoration:none;margin-left:22px;font-weight:600}
-.btn{display:inline-block;background:var(--blue);color:#fff;border:0;border-radius:8px;padding:13px 24px;font:600 17px "Source Sans 3",sans-serif;cursor:pointer;text-decoration:none}
-.btn:hover{background:#1f45d6}
-:focus-visible{outline:3px solid var(--sun);outline-offset:2px}
-.hero{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center;padding:56px 0 72px}
-.hero h1{font-size:clamp(38px,5.5vw,64px);font-weight:800;letter-spacing:-.02em}
-.hero p{color:var(--muted);max-width:46ch;margin:20px 0 28px}
-.calc{background:var(--ink);color:#fff;border-radius:16px;padding:28px}
-.calc h2{font-size:22px;margin-bottom:18px}
-.calc label{display:flex;justify-content:space-between;font-weight:600;margin-top:16px}
-.calc input[type=range]{width:100%;accent-color:var(--sun)}
-.result{margin-top:24px;padding-top:20px;border-top:1px solid #35506f}
-.result b{display:block;font:800 52px "Bricolage Grotesque",sans-serif;color:var(--sun);line-height:1}
-.result small{color:#b8c7d8;display:block;margin-top:10px;font-size:14px}
-section{padding:64px 0}
-section h2{font-size:clamp(28px,4vw,40px);margin-bottom:32px}
-.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-.svc{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:24px}
-.svc h3{font-size:21px;margin-bottom:8px}
-.svc p{margin:0;color:var(--muted);font-size:16px}
-.steps{list-style:none;padding:0;margin:0;display:grid;gap:0;max-width:640px}
-.steps li{display:grid;grid-template-columns:44px 1fr;gap:16px;padding:20px 0;border-top:1px solid var(--line)}
-.steps li:last-child{border-bottom:1px solid var(--line)}
-.steps span{font:800 24px "Bricolage Grotesque",sans-serif;color:var(--blue)}
-.steps b{display:block;font-size:19px}
-.steps p{margin:2px 0 0;color:var(--muted)}
-.contact{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:32px;max-width:620px}
-.contact label{display:block;font-weight:600;margin-top:16px}
-.contact input,.contact select,.contact textarea{width:100%;margin-top:6px;padding:12px;border:1px solid var(--line);border-radius:8px;font:inherit;background:#fff;color:var(--ink)}
-.contact .btn{margin-top:24px}
-#msg{margin-top:16px;font-weight:600}
-footer{padding:32px 0 48px;color:var(--muted);font-size:15px}
-.work{display:grid;grid-template-columns:1fr auto;gap:48px;align-items:center}
-.work p{color:var(--muted);max-width:44ch}
-.reel{width:min(340px,100%);aspect-ratio:9/16;border-radius:16px;overflow:hidden;background:var(--ink);justify-self:center}
-.reel video,.reel iframe{width:100%;height:100%;object-fit:cover;border:0;display:block}
-@media(max-width:760px){.work{grid-template-columns:1fr}}
-@media(max-width:760px){.hero{grid-template-columns:1fr}nav a:not(.btn){display:none}}
+img{max-width:100%}
+.wrap{width:100%;max-width:1760px;margin:0 auto;padding-inline:var(--pad)}
+#bar{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--y);transform:scaleX(0);transform-origin:0 50%;z-index:50}
+header.top{position:sticky;top:0;z-index:40;width:100%;background:rgba(23,24,28,.85);backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;height:72px}
+.logo{display:flex;align-items:center;gap:12px;font:800 22px Syne,sans-serif;text-decoration:none}
+.logo img{border-radius:10px;display:block;transition:transform .5s}
+.logo:hover img{transform:rotate(-8deg) scale(1.1)}
+nav div{display:flex;align-items:center;gap:30px}
+nav div a:not(.btn){text-decoration:none;color:var(--mute);font-weight:500;position:relative}
+nav div a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;background:var(--y);transform:scaleX(0);transition:transform .3s;transform-origin:0 50%}
+nav div a:not(.btn):hover{color:var(--ink)}
+nav div a:not(.btn):hover::after{transform:scaleX(1)}
+.btn{display:inline-block;background:var(--y);color:var(--dk)!important;border:0;border-radius:999px;padding:15px 30px;font:700 16px "DM Sans",sans-serif;cursor:pointer;text-decoration:none;transition:transform .2s,box-shadow .3s,background .3s}
+.btn:hover{box-shadow:0 12px 32px rgba(255,194,26,.35);background:#ffd24d}
+.btn.ghost{background:transparent;border:1.5px solid var(--line);color:var(--ink)!important}
+.btn.ghost:hover{border-color:var(--y);box-shadow:none;background:rgba(255,194,26,.08)}
+nav .btn{padding:11px 24px}
+:focus-visible{outline:3px solid var(--y);outline-offset:3px}
+
+.hero{position:relative;width:100%;min-height:calc(100svh - 72px);display:flex;align-items:center;overflow:hidden;
+ --hero-img:url("images/hero-bg.jpg"); /* replace images/hero-bg.jpg with your own photo */
+ background:radial-gradient(700px circle at var(--gx,70%) var(--gy,30%),rgba(255,194,26,.16),transparent 60%),linear-gradient(90deg,rgba(23,24,28,.94) 0%,rgba(23,24,28,.72) 48%,rgba(23,24,28,.3) 100%),var(--hero-img) center/cover no-repeat,var(--bg)}
+.hero::after{content:"";position:absolute;left:0;right:0;bottom:0;height:120px;background:linear-gradient(transparent,var(--bg));pointer-events:none}
+.hero .wrap{display:grid;grid-template-columns:1.05fr 1fr;gap:clamp(24px,4vw,80px);align-items:center;padding-block:56px}
+.hero h1{font-size:clamp(38px,5.4vw,100px);font-weight:800;line-height:1.04}.hero h1 .hl i{color:var(--y)}
+.hero h1 span{display:inline-block;overflow:hidden;vertical-align:bottom;padding-bottom:.08em}
+.hero h1 i{display:inline-block;font-style:normal;animation:up .9s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--n)*90ms)}
+@keyframes up{from{transform:translateY(110%) rotate(4deg)}}
+.hero p{font-size:clamp(18px,1.5vw,23px);color:#cfd0d8;max-width:52ch;margin:28px 0 36px}
+.pts{display:flex;flex-wrap:wrap;gap:12px 28px;margin:34px 0 0;padding:0;list-style:none;font-weight:600;font-size:.95em}
+.pts li{display:flex;align-items:center;gap:10px}
+.pts li::before{content:"";width:20px;height:20px;border-radius:50%;background:var(--y) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-6.5' fill='none' stroke='%231b1c20' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/contain no-repeat}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.stage{position:relative;perspective:1500px;height:clamp(420px,46vw,720px)}
+.scene{position:absolute;inset:0;transform-style:preserve-3d;transform:rotateX(var(--rx,8deg)) rotateY(var(--ry,-18deg));transition:transform .25s ease-out}
+.ly{position:absolute;transform-style:preserve-3d;animation:fl 6s ease-in-out infinite}
+@keyframes fl{50%{translate:0 -16px}}
+.ring{inset:2% 4%;border:2px dashed rgba(255,194,26,.45);border-radius:50%;transform:translateZ(-90px);animation:spin 40s linear infinite}
+@keyframes spin{to{rotate:360deg}}
+.l1{left:6%;top:8%;width:62%;aspect-ratio:1;border-radius:6%;overflow:hidden;box-shadow:0 40px 80px rgba(0,0,0,.55);transform:translateZ(0)}
+.l1 img{width:100%;height:100%;display:block}
+.l2{right:0;bottom:4%;width:42%;aspect-ratio:9/15;border-radius:18px;background:var(--bg2);border:1px solid var(--line);box-shadow:0 40px 70px rgba(0,0,0,.6);transform:translateZ(110px);animation-delay:-2s;padding:14px;display:flex;flex-direction:column;justify-content:space-between}
+.pl{align-self:center;margin-top:30%;width:58px;height:58px;border-radius:50%;background:var(--y);display:grid;place-items:center}
+.pl::after{content:"";border:10px solid transparent;border-left:16px solid var(--dk);margin-left:6px}
+.bars{display:grid;gap:6px}.bars b{height:8px;border-radius:4px;background:var(--line)}.bars b:nth-child(1){background:var(--y);width:70%}.bars b:nth-child(2){width:90%}.bars b:nth-child(3){width:45%}
+.bd{background:var(--ink);color:var(--dk);font:800 clamp(13px,1.2vw,18px) Syne,sans-serif;padding:11px 20px;border-radius:999px;box-shadow:0 20px 40px rgba(0,0,0,.5)}
+.b1{right:8%;top:6%;transform:translateZ(170px);background:var(--y);animation-delay:-1s}
+.b2{left:0;bottom:12%;transform:translateZ(140px);animation-delay:-3.5s}
+
+.mq{width:100%;overflow:hidden;background:var(--y);color:var(--dk);border-block:1px solid #000}
+.mq div{display:flex;width:max-content;animation:mq 32s linear infinite}
+.mq:hover div{animation-play-state:paused}
+.mq span{font:800 clamp(18px,2vw,28px) Syne,sans-serif;padding:16px 32px;white-space:nowrap}
+.mq span::after{content:"";display:inline-block;width:10px;height:10px;background:var(--dk);border-radius:50%;margin-left:64px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+section{width:100%;padding:clamp(72px,9vw,150px) 0}
+.alt{background:var(--bg2)}
+.sh{max-width:760px;margin-bottom:clamp(36px,4vw,64px)}
+.sh h2{font-size:clamp(34px,4.8vw,76px)}
+.sh p{color:var(--mute);margin:16px 0 0}
+.grid{display:grid;gap:clamp(16px,2vw,32px)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--bg2);border:1px solid var(--line);border-radius:22px;padding:clamp(26px,2.6vw,44px)}
+.alt .card{background:var(--bg)}
+.card:hover{border-color:var(--y)}
+.ic{width:62px;height:62px;border-radius:16px;background:var(--y);display:grid;place-items:center;margin-bottom:26px;transform:translateZ(50px);box-shadow:0 14px 28px rgba(255,194,26,.25)}
+.ic svg{width:30px;height:30px;stroke:var(--dk);fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.card h3{font-size:clamp(24px,2vw,32px);margin-bottom:12px;transform:translateZ(34px)}
+.card p{margin:0 0 18px;color:var(--mute)}
+.card ul{margin:0;padding:0;list-style:none;font-size:.95em}
+.card li{padding:9px 0;border-top:1px solid var(--line);transition:padding .3s,color .3s}
+.card li:hover{padding-left:12px;color:var(--y)}
+.st b{font:800 15px Syne,sans-serif;color:var(--y);display:block;margin-bottom:8px}
+.st h3{font-size:clamp(22px,1.8vw,28px)}
+.st p{margin:10px 0 0}
+.work{align-items:start}
+.reel{margin:0;max-width:420px;width:100%;justify-self:center}
+.frame{position:relative;aspect-ratio:9/16;border-radius:22px;overflow:hidden;background:var(--bg2);border:1px solid var(--line);box-shadow:0 30px 60px rgba(0,0,0,.45)}
+.frame video,.frame iframe{width:100%;height:100%;object-fit:cover;border:0;display:block}
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;color:var(--mute);background:linear-gradient(160deg,#2e2f38,#17181c)}
+.ph b{color:var(--ink);font:700 19px Syne,sans-serif;margin-bottom:6px}
+.snd{position:absolute;right:12px;bottom:12px;z-index:2;background:rgba(23,24,28,.85);color:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 14px;font:600 13px "DM Sans",sans-serif;cursor:pointer}
+.snd:hover{border-color:var(--y)}
+.reel figcaption{margin-top:18px}
+.reel figcaption b{display:block;font:700 21px Syne,sans-serif}
+.reel figcaption span{color:var(--mute);font-size:.95em}
+.why{border-left:3px solid var(--y)}
+.cgrid{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,5vw,100px);align-items:start}
+.info h2{font-size:clamp(34px,4.8vw,76px)}
+.info p{color:var(--mute);margin:20px 0 0;max-width:46ch}
+.info dl{margin:36px 0 0}
+.info dt{color:var(--mute);font-size:14px;margin-top:22px}
+.info dd{margin:2px 0 0;font:600 clamp(20px,1.7vw,26px) "DM Sans",sans-serif}
+.info dd a{text-decoration:none}.info dd a:hover{color:var(--y)}
+form{background:var(--bg2);border:1px solid var(--line);border-radius:24px;padding:clamp(24px,3vw,48px)}
+form label{display:block;font-weight:700;font-size:15px;margin-top:18px}
+form .two label{margin-top:0}
+form input,form select,form textarea{width:100%;margin-top:7px;padding:14px;border:1px solid var(--line);border-radius:12px;font:inherit;background:var(--bg);color:var(--ink);transition:border-color .25s,box-shadow .25s}
+form input:focus,form select:focus,form textarea:focus{outline:0;border-color:var(--y);box-shadow:0 0 0 4px rgba(255,194,26,.18)}
+form .two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+form .btn{margin-top:26px;width:100%}
+#msg{margin-top:16px;font-weight:600;min-height:1.5em}
+.hp{position:absolute;left:-9999px}
+footer{width:100%;border-top:1px solid var(--line);padding:32px 0 44px;color:var(--mute);font-size:15px}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.wa{position:fixed;right:20px;bottom:20px;z-index:45;background:#25d366;color:#07210f;font-weight:700;border-radius:999px;padding:13px 22px;text-decoration:none;box-shadow:0 8px 24px rgba(0,0,0,.4);transition:transform .25s}
+.wa:hover{transform:translateY(-4px) scale(1.05)}
+
+[data-tilt]{position:relative;transform-style:preserve-3d;transition:transform .25s ease-out,border-color .3s}
+[data-tilt]::after{content:"";position:absolute;inset:0;border-radius:inherit;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(380px circle at var(--mx,50%) var(--my,50%),rgba(255,194,26,.18),transparent 55%)}
+[data-tilt]:hover::after{opacity:1}
+.js .rv{opacity:0;translate:0 48px;transition:opacity .9s,translate .9s cubic-bezier(.2,.8,.2,1);transition-delay:var(--d,0s)}
+.js .rv.in{opacity:1;translate:0 0}
+
+.alt{position:relative;overflow:hidden}
+.alt::before{content:"";position:absolute;right:-10%;top:-25%;width:46vw;height:46vw;border-radius:50%;background:radial-gradient(circle,rgba(255,194,26,.09),transparent 65%);pointer-events:none}
+.alt .wrap{position:relative}
+.chips{display:flex;flex-wrap:wrap;gap:14px}
+.chips span{padding:16px 28px;border:1px solid var(--line);border-radius:999px;font:700 clamp(16px,1.4vw,21px) Syne,sans-serif;background:var(--bg2);transition:transform .25s,background .25s,color .25s,border-color .25s}
+.chips span:hover{background:var(--y);color:var(--dk);transform:translateY(-6px) rotate(-2deg);border-color:var(--y)}
+.faq details{border:1px solid var(--line);border-radius:16px;background:var(--bg);margin-bottom:12px;padding:0 26px;transition:border-color .3s}
+.faq details:hover,.faq details[open]{border-color:var(--y)}
+.faq summary{cursor:pointer;list-style:none;padding:22px 0;font:700 clamp(18px,1.5vw,22px) Syne,sans-serif;display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--y);font-size:30px;line-height:1;transition:transform .3s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 22px;color:var(--mute);max-width:70ch;animation:fd .4s}
+@keyframes fd{from{opacity:0;translate:0 -8px}}
+#cur{position:fixed;left:0;top:0;width:34px;height:34px;margin:-17px 0 0 -17px;border:2px solid var(--y);border-radius:50%;pointer-events:none;z-index:60;opacity:0;transition:width .25s,height .25s,margin .25s,background .25s,opacity .3s}
+#cur.on{opacity:.9}
+#cur.big{width:68px;height:68px;margin:-34px 0 0 -34px;background:rgba(255,194,26,.14)}
+@media(max-width:1100px){.g4{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.hero .wrap,.cgrid,.g3{grid-template-columns:1fr}.hero{min-height:0}.stage{height:min(92vw,520px)}nav div a:not(.btn){display:none}.reel{max-width:360px}}
+@media(max-width:560px){.g4,form .two{grid-template-columns:1fr}.logo{font-size:19px}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.js .rv{opacity:1;translate:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<div class="wrap">
-  <nav>
-    <strong>Your Agency</strong>
-    <div><a href="#services">Services</a><a href="#process">How we work</a><a class="btn" href="#contact">Get a free plan</a></div>
-  </nav>
+<div id="bar"></div><div id="cur"></div>
+<header class="top"><div class="wrap"><nav>
+  <a class="logo" href="#top"><img src="images/logo.png" alt="" width="44" height="44">Pondy Editor</a>
+  <div><a href="#services">Services</a><a href="#process">Process</a><a href="#work">Our work</a><a href="#contact">Contact</a><a class="btn" href="#contact" data-mag>Get a quote</a></div>
+</nav></div></header>
 
-  <header class="hero">
-    <div>
-      <h1>Marketing that pays for itself.</h1>
-      <p>We run search, social and email campaigns for small businesses, and report on one thing: how many customers you got and what each cost.</p>
-      <a class="btn" href="#contact">Book a free strategy call</a>
+<main id="top">
+<div class="hero" id="hero"><div class="wrap">
+  <div>
+    <h1><span><i style="--n:0">Professional</i></span> <span><i style="--n:1">video</i></span> <span><i style="--n:2">production</i></span> <br><span class="hl"><i style="--n:3">that</i></span> <span class="hl"><i style="--n:4">turns</i></span> <span class="hl"><i style="--n:5">viewers</i></span> <span class="hl"><i style="--n:6">into</i></span> <span class="hl"><i style="--n:7">customers.</i></span></h1>
+    <p>Pondy Editor is a video and digital marketing team in Puducherry. We shoot, edit and deliver your videos, then run the Meta ads that bring real enquiries to your business.</p>
+    <div class="cta"><a class="btn" href="#contact" data-mag>Get a free quote</a><a class="btn ghost" href="#work" data-mag>Watch our work</a><a class="btn ghost" href="tel:+918270064104" data-mag>Call +91 8270064104</a></div>
+    <ul class="pts"><li>Shooting at your location</li><li>Editing for every platform</li><li>Meta ads that bring leads</li></ul>
+  </div>
+  <div class="stage" aria-hidden="true"><div class="scene" id="scene">
+    <div class="ly ring"></div>
+    <div class="ly l1"><img src="images/logo.png" alt=""></div>
+    <div class="ly l2"><div class="pl"></div><div class="bars"><b></b><b></b><b></b></div></div>
+    <div class="ly bd b1">Meta Ads</div>
+    <div class="ly bd b2">4K Editing</div>
+  </div></div>
+</div></div>
+
+<div class="mq" aria-hidden="true"><div id="mq"><span>Video shooting</span><span>Video editing</span><span>Reels and shorts</span><span>Meta ads</span><span>Digital marketing</span><span>Ad creatives</span><span>Delivery in every format</span></div></div>
+
+<section id="services"><div class="wrap">
+  <div class="sh rv"><h2>Three services. One goal: more customers.</h2><p>Pick one or combine them. Most clients start with a video and grow from there.</p></div>
+  <div class="grid g3">
+    <article class="card rv" data-tilt><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="13" height="14" rx="2"/><path d="m16 10 5-3v10l-5-3z"/></svg></div><h3>Video editing</h3><p>Clean, fast, scroll-stopping edits that match your brand.</p>
+      <ul><li>Reels, shorts and ad creatives</li><li>Product and business promo videos</li><li>Colour grading, sound and subtitles</li><li>Wedding, event and YouTube edits</li></ul></article>
+    <article class="card rv" style="--d:.12s" data-tilt><div class="ic"><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg></div><h3>Digital marketing</h3><p>A steady plan that brings in enquiries, not just likes.</p>
+      <ul><li>Social media management</li><li>Content calendar and posters</li><li>Google Business and local SEO</li><li>Monthly report in plain language</li></ul></article>
+    <article class="card rv" style="--d:.24s" data-tilt><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v3M12 18v3"/></svg></div><h3>Meta ads</h3><p>Facebook and Instagram ads built for leads and sales.</p>
+      <ul><li>Campaign setup and targeting</li><li>Ad creatives and video ads</li><li>WhatsApp and lead-form campaigns</li><li>Weekly testing and budget control</li></ul></article>
+  </div>
+</div></section>
+
+<section id="industries"><div class="wrap">
+  <div class="sh rv"><h2>Who we make videos for</h2><p>If you sell something or offer a service, a good video and a smart ad can bring you customers.</p></div>
+  <div class="chips rv"><span>Restaurants and cafes</span><span>Salons and spas</span><span>Clothing and jewellery shops</span><span>Schools and coaching centres</span><span>Real estate</span><span>Clinics and hospitals</span><span>Weddings and events</span><span>Startups and local brands</span></div>
+</div></section>
+
+<section id="process" class="alt"><div class="wrap">
+  <div class="sh rv"><h2>From video capture to delivery</h2><p>You always know what happens next. Six clear steps, with your approval at each stage.</p></div>
+  <div class="grid g3">
+    <div class="card st rv" data-tilt><b>Step 1</b><h3>Brief and plan</h3><p>We learn your business, customers and goal. You get a shot list and a schedule.</p></div>
+    <div class="card st rv" style="--d:.1s" data-tilt><b>Step 2</b><h3>Shoot</h3><p>Professional camera, lighting and audio at your location, in the format you need.</p></div>
+    <div class="card st rv" style="--d:.2s" data-tilt><b>Step 3</b><h3>Edit</h3><p>Cuts, colour, sound, music, text and subtitles, built for the platform it will run on.</p></div>
+    <div class="card st rv" data-tilt><b>Step 4</b><h3>Review</h3><p>You watch the draft and tell us what to change. Revisions are included.</p></div>
+    <div class="card st rv" style="--d:.1s" data-tilt><b>Step 5</b><h3>Deliver</h3><p>Final files for Instagram, Facebook, YouTube and WhatsApp.</p></div>
+    <div class="card st rv" style="--d:.2s" data-tilt><b>Step 6</b><h3>Promote</h3><p>We run it as a Meta ad or post, then report how many people enquired.</p></div>
+  </div>
+</div></section>
+
+<section id="work"><div class="wrap">
+  <div class="sh rv"><h2>Sample videos</h2><p>Three styles we make often. Tap a video for sound.</p></div>
+  <div class="grid g3 work">
+    <figure class="reel rv"><div class="frame" id="f0" data-tilt><video data-i="0" src="./video/project.mp4" muted loop playsinline preload="metadata"></video></div>
+      <figcaption><b>Project showcase</b><span>Fast cuts, bold text, made for Instagram Reels.</span></figcaption></figure>
+    <figure class="reel rv" style="--d:.12s"><div class="frame" id="f1" data-tilt><video data-i="1" src="./video/sample2.mp4" muted loop playsinline preload="metadata"></video></div>
+      <figcaption><b>Product promo</b><span>Close shots and clean colour for shops and brands.</span></figcaption></figure>
+    <figure class="reel rv" style="--d:.24s"><div class="frame" id="f2" data-tilt><video data-i="2" src="./video/sample3.mp4" muted loop playsinline preload="metadata"></video></div>
+      <figcaption><b>Meta ad creative</b><span>A hook, an offer and a button, built to bring leads.</span></figcaption></figure>
+  </div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+  <div class="sh rv"><h2>Why businesses choose us</h2></div>
+  <div class="grid g4">
+    <div class="card why rv" data-tilt><h3>One team</h3><p>Shooting, editing and ads under one roof. No hand-offs, no delays.</p></div>
+    <div class="card why rv" style="--d:.1s" data-tilt><h3>On-time delivery</h3><p>You get a date at the start and we keep to it.</p></div>
+    <div class="card why rv" style="--d:.2s" data-tilt><h3>Clear pricing</h3><p>A quote before we begin. No hidden charges.</p></div>
+    <div class="card why rv" style="--d:.3s" data-tilt><h3>Results you can see</h3><p>We report enquiries and cost per lead, not just views.</p></div>
+  </div>
+</div></section>
+
+<section id="faq" class="alt"><div class="wrap cgrid">
+  <div class="info rv"><h2>Questions we often hear</h2><p>Not here? Call or WhatsApp us and we will answer the same day.</p></div>
+  <div class="faq rv">
+    <details><summary>What do you need from me to start?</summary><p>A short brief: what you sell, who your customers are and what you want people to do after watching. We plan the rest with you.</p></details>
+    <details><summary>Do you shoot the videos or only edit?</summary><p>Both. We can shoot at your location and edit, or edit footage you already have.</p></details>
+    <details><summary>Which formats will I receive?</summary><p>Vertical for Reels, Shorts and WhatsApp Status, plus square and wide versions for Facebook and YouTube.</p></details>
+    <details><summary>Can I ask for changes after the first draft?</summary><p>Yes. You review the draft and tell us what to change. Revisions are part of our process.</p></details>
+    <details><summary>How does Meta ads pricing work?</summary><p>There are two parts: the ad budget you pay to Meta, and our service fee. We agree both with you before any campaign goes live.</p></details>
+    <details><summary>Where do you work?</summary><p>We are based in Thavalakuppam, Puducherry, and shoot locally. We also edit videos and run ads online for clients anywhere.</p></details>
+  </div>
+</div></section>
+
+<section id="contact"><div class="wrap cgrid">
+  <div class="info rv">
+    <h2>Tell us about your project</h2>
+    <p>Send a message and we will reply with a plan and a quote. You can also call or message us on WhatsApp.</p>
+    <dl>
+      <dt>Phone and WhatsApp</dt><dd><a href="tel:+918270064104">+91 8270064104</a></dd>
+      <dt>Email</dt><dd><a href="mailto:pondyeditor124@gmail.com">pondyeditor124@gmail.com</a></dd>
+      <dt>Address</dt><dd>Rajive Gandhi Nagar,<br>Thavalakuppam</dd>
+    </dl>
+  </div>
+  <form id="form" class="rv" novalidate>
+    <input class="hp" type="text" id="trap" tabindex="-1" autocomplete="off" aria-hidden="true">
+    <div class="two">
+      <div><label for="name">Your name</label><input id="name" required autocomplete="name"></div>
+      <div><label for="phone">Phone number</label><input id="phone" type="tel" required autocomplete="tel"></div>
     </div>
-    <div class="calc" aria-live="polite">
-      <h2>Estimate your results</h2>
-      <label for="budget">Monthly ad budget <span id="bv"></span></label>
-      <input type="range" id="budget" min="500" max="20000" step="500" value="3000">
-      <label for="cpc">Cost per click <span id="cv"></span></label>
-      <input type="range" id="cpc" min="0.2" max="5" step="0.1" value="1">
-      <label for="cr">Visitors who enquire <span id="rv"></span></label>
-      <input type="range" id="cr" min="1" max="15" step="0.5" value="4">
-      <div class="result"><b id="leads">0</b>enquiries per month
-        <small id="cpl"></small>
-        <small>A rough estimate. Real results depend on your market and offer.</small></div>
-    </div>
-  </header>
+    <label for="email">Email</label><input id="email" type="email" required autocomplete="email">
+    <label for="need">What do you need?</label>
+    <select id="need"><option>Video editing</option><option>Video shooting and editing</option><option>Digital marketing</option><option>Meta ads</option><option>Video and ads together</option><option>Not sure yet</option></select>
+    <label for="note">Tell us about your business</label><textarea id="note" rows="4"></textarea>
+    <button class="btn" type="submit" id="send">Send on WhatsApp</button>
+    <div id="msg" role="status" aria-live="polite"></div>
+  </form>
+</div></section>
+</main>
 
-  <section id="work">
-    <div class="work">
-      <div>
-        <h2>See our work</h2>
-        <p>A recent project from our team. Scroll and it plays on its own.</p>
-      </div>
-      <div class="reel" id="reel">
-        <!-- <video id="projectVideo" src="video/project.mp4" muted loop playsinline preload="metadata"></video> -->
-         
-<video
-  id="projectVideo"
-  src="./video/project.mp4"
-  muted
-  loop
-  playsinline
-  preload="metadata">
-</video>
-
-      </div>
-    </div>
-  </section>
-
-  <section id="services">
-    <h2>What we do</h2>
-    <div class="services">
-      <div class="svc"><h3>Search ads</h3><p>Show up when people are already searching for what you sell.</p></div>
-      <div class="svc"><h3>Social media</h3><p>Paid and organic content that builds an audience and drives enquiries.</p></div>
-      <div class="svc"><h3>SEO</h3><p>Fix your site and content so you rank without paying for every click.</p></div>
-      <div class="svc"><h3>Email marketing</h3><p>Turn past customers and leads into repeat sales.</p></div>
-    </div>
-  </section>
-
-  <section id="process">
-    <h2>How we work</h2>
-    <ol class="steps">
-      <li><span>1</span><div><b>Audit</b><p>We review your site, ads and competitors, and send you what we find.</p></div></li>
-      <li><span>2</span><div><b>Plan</b><p>You get a campaign plan with a budget and a target cost per customer.</p></div></li>
-      <li><span>3</span><div><b>Launch</b><p>We build and run the campaigns, testing new ads every week.</p></div></li>
-      <li><span>4</span><div><b>Report</b><p>A monthly report in plain language, then a call to decide what to change.</p></div></li>
-    </ol>
-  </section>
-
-  <section id="contact">
-    <h2>Get your free plan</h2>
-    <form class="contact" id="form">
-      <label for="name">Your name</label>
-      <input id="name" required>
-      <label for="email">Email</label>
-      <input id="email" type="email" required>
-      <label for="need">What do you need most?</label>
-      <select id="need"><option>Search ads</option><option>Social media</option><option>SEO</option><option>Email marketing</option><option>Not sure yet</option></select>
-      <label for="note">Tell us about your business</label>
-      <textarea id="note" rows="4"></textarea>
-      <button class="btn" type="submit">Send request</button>
-      <div id="msg" role="status"></div>
-    </form>
-  </section>
-
-  <footer>© <span id="yr"></span> Your Agency. hello@youragency.com</footer>
-</div>
+<footer><div class="wrap"><span>© <span id="yr"></span> Pondy Editor. Rajive Gandhi Nagar, Thavalakuppam.</span><span>+91 8270064104 · pondyeditor124@gmail.com</span></div></footer>
+<a class="wa" href="https://wa.me/918270064104?text=Hi%2C%20I%20need%20a%20video%20quote" target="_blank" rel="noopener">WhatsApp us</a>
 
 <script>
-const $ = id => document.getElementById(id);
-const AGENCY_EMAIL = "hello@youragency.com"; // change to your email
-function calc(){
-  const b=+$("budget").value, c=+$("cpc").value, r=+$("cr").value;
-  const leads=Math.round(b/c*r/100);
-  $("bv").textContent="₹"+b.toLocaleString("en-IN");
-  $("cv").textContent="₹"+c.toFixed(1);
-  $("rv").textContent=r+"%";
-  $("leads").textContent=leads.toLocaleString("en-IN");
-  $("cpl").textContent=leads?"About ₹"+Math.round(b/leads).toLocaleString("en-IN")+" per enquiry":"";
-}
-["budget","cpc","cr"].forEach(i=>$(i).addEventListener("input",calc));
-calc();
+const $=id=>document.getElementById(id);
 $("yr").textContent=new Date().getFullYear();
+$("mq").innerHTML+=$("mq").innerHTML;
 
-// Play the project video when it scrolls into view, pause when it leaves.
-const vid=$("projectVideo");
-function showInstagramFallback(){
-  $("reel").innerHTML='<iframe src="https://www.instagram.com/reel/De6OWplMRM3/embed" title="Project video" loading="lazy" allowfullscreen></iframe>';
-}
-vid.addEventListener("error",showInstagramFallback);
-new IntersectionObserver(entries=>{
-  entries.forEach(en=>{
-    if(en.isIntersecting){vid.play().catch(()=>{});}else{vid.pause();}
+/* Scroll progress and reveal */
+const bar=$("bar");
+addEventListener("scroll",()=>{bar.style.transform="scaleX("+scrollY/(document.documentElement.scrollHeight-innerHeight)+")"},{passive:true});
+const rio=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");rio.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".rv").forEach(el=>rio.observe(el));
+
+/* 3D mouse effects (desktop only) */
+const fine=matchMedia("(hover:hover) and (pointer:fine)").matches&&!matchMedia("(prefers-reduced-motion:reduce)").matches;
+if(fine){
+  const cur=$("cur");let tx=0,ty=0,cx=0,cy=0;
+  addEventListener("pointermove",e=>{tx=e.clientX;ty=e.clientY;cur.classList.add("on")});
+  document.addEventListener("pointerover",e=>cur.classList.toggle("big",!!e.target.closest("a,button,summary,[data-tilt],.chips span")));
+  document.documentElement.addEventListener("pointerleave",()=>cur.classList.remove("on"));
+  (function loop(){cx+=(tx-cx)*.18;cy+=(ty-cy)*.18;cur.style.transform=`translate(${cx}px,${cy}px)`;requestAnimationFrame(loop)})();
+  document.querySelectorAll("[data-tilt]").forEach(el=>{
+    el.addEventListener("pointermove",e=>{
+      const r=el.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+      el.style.setProperty("--mx",x*100+"%");el.style.setProperty("--my",y*100+"%");
+      el.style.transform=`perspective(900px) rotateX(${(.5-y)*12}deg) rotateY(${(x-.5)*14}deg) translateZ(12px)`;
+    });
+    el.addEventListener("pointerleave",()=>el.style.transform="");
   });
-},{threshold:0.5}).observe(vid);
+  const hero=$("hero"),sc=$("scene");
+  hero.addEventListener("pointermove",e=>{
+    const r=hero.getBoundingClientRect(),x=(e.clientX-r.left)/r.width,y=(e.clientY-r.top)/r.height;
+    sc.style.setProperty("--ry",(x-.5)*50+"deg");sc.style.setProperty("--rx",(.5-y)*28+"deg");
+    hero.style.setProperty("--gx",x*100+"%");hero.style.setProperty("--gy",y*100+"%");
+  });
+  hero.addEventListener("pointerleave",()=>{sc.style.removeProperty("--ry");sc.style.removeProperty("--rx")});
+  document.querySelectorAll("[data-mag]").forEach(b=>{
+    b.addEventListener("pointermove",e=>{const r=b.getBoundingClientRect();b.style.transform=`translate(${(e.clientX-r.left-r.width/2)*.25}px,${(e.clientY-r.top-r.height/2)*.35}px)`});
+    b.addEventListener("pointerleave",()=>b.style.transform="");
+  });
+}
+
+/* Videos: play in view, pause out of view, tap for sound. Missing file shows a placeholder. */
+const igFallback='<iframe src="https://www.instagram.com/reel/De6OWplMRM3/embed" title="Project video" loading="lazy" allowfullscreen></iframe>';
+const names=["video/project.mp4","video/sample2.mp4","video/sample3.mp4"];
+const vio=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target;e.isIntersecting?v.play().catch(()=>{}):v.pause()}),{threshold:.5});
+document.querySelectorAll(".frame video").forEach(v=>{
+  const i=+v.dataset.i,f=$("f"+i);
+  v.addEventListener("error",()=>{f.innerHTML=i===0?igFallback:'<div class="ph"><b>Add your video here</b>Save it as '+names[i]+'</div>'});
+  const b=document.createElement("button");b.className="snd";b.type="button";b.textContent="Sound off";
+  b.onclick=()=>{v.muted=!v.muted;b.textContent=v.muted?"Sound off":"Sound on";document.querySelectorAll(".frame video").forEach(o=>{if(o!==v)o.muted=true});document.querySelectorAll(".snd").forEach(s=>{if(s!==b)s.textContent="Sound off"})};
+  f.appendChild(b);vio.observe(v);
+});
+
+/* Contact form: opens WhatsApp with the enquiry ready to send to +91 8270064104. */
 $("form").addEventListener("submit",e=>{
   e.preventDefault();
-  const body=`Name: ${$("name").value}\nEmail: ${$("email").value}\nNeed: ${$("need").value}\n\n${$("note").value}`;
-  window.location.href=`mailto:${AGENCY_EMAIL}?subject=${encodeURIComponent("New enquiry from "+$("name").value)}&body=${encodeURIComponent(body)}`;
-  $("msg").textContent="Opening your email app. Just press send to finish.";
+  if($("trap").value||!$("form").reportValidity())return;
+  const t=`Hi Pondy Editor, I need a quote.\nName: ${$("name").value}\nPhone: ${$("phone").value}\nEmail: ${$("email").value}\nNeed: ${$("need").value}\n${$("note").value}`;
+  window.open("https://wa.me/918270064104?text="+encodeURIComponent(t),"_blank","noopener");
+  $("msg").style.color="#7ee0a1";$("msg").textContent="WhatsApp is opening with your message. Press send there to finish.";
+  $("form").reset();
 });
 </script>
 </body>
